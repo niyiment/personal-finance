@@ -9,6 +9,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/financedb
     username: myuser
     password: secret
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
@@ -16,11 +17,18 @@ spring:
 
     properties:
       format-sql: true
-      show-sql: true
+    show-sql: true
 
   security:
     user:
       name: user
       password: secret247
 
+jwt:
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  expiration: 86400000
 
+logging:
+  level:
+    com.niyiment.finance: DEBUG
+    org.springframework.security: DEBUG
