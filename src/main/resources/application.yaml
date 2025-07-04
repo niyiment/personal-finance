@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: PersonalFinance
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/financedb
+    username: myuser
+    password: secret
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      format-sql: true
+      show-sql: true
+
+  security:
+    user:
+      name: user
+      password: secret247
+
+
